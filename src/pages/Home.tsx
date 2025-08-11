@@ -12,10 +12,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           <div className="text-center max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Get Your Projects Delivered <span className="text-accent-400">On Time</span>
+              Transform Your Business with <span className="text-accent-400">Trivance Tech</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200">
-              Expert solutions for your academic and client projects. Professional quality, fast turnaround, and competitive pricing.
+              Bangladesh's premier IT solutions company delivering cutting-edge web development, mobile apps, and digital transformation services from Dhaka to the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
