@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle, Code, BookOpen, Cpu, Clock, Award, Star, MessageSquare, Mail, Layout, Monitor, Users, Briefcase, Palette, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projectsData } from '../data/projects';
+import { projectsData } from '../../data/projects';
 
 const Home = () => {
   const featuredProjects = projectsData.slice(0, 3);
