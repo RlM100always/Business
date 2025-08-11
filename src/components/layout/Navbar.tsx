@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Laptop, Menu, X } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +15,16 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Laptop className="h-8 w-8 text-primary-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">ProjectHub</span>
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center shadow-lg">
+                  <Zap className="h-6 w-6 text-white" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent-500 rounded-full animate-pulse"></div>
+              </div>
+              <div className="ml-3">
+                <span className="text-xl font-bold text-gray-900 tracking-tight">Trivance</span>
+                <span className="text-xl font-bold text-primary-600 tracking-tight">Tech</span>
+              </div>
             </Link>
           </div>
           
@@ -31,6 +39,16 @@ const Navbar = () => {
               }
             >
               Home
+            </NavLink>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => 
+                isActive 
+                  ? "text-primary-600 font-medium" 
+                  : "text-gray-700 hover:text-primary-600 transition-colors"
+              }
+            >
+              About Us
             </NavLink>
             <NavLink 
               to="/projects" 
@@ -106,6 +124,17 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Home
+            </NavLink>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => 
+                isActive 
+                  ? "block px-3 py-2 rounded-md text-primary-600 font-medium" 
+                  : "block px-3 py-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50 transition-colors"
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
             </NavLink>
             <NavLink 
               to="/projects" 
