@@ -1,6 +1,7 @@
 {
   "name": "project-order-platform",
   "private": true,
+  "homepage": "https://rlm100always.github.io/Business",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
@@ -9,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
