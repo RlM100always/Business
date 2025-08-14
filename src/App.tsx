@@ -9,6 +9,9 @@ import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
+import Careers from './pages/Careers';
+import JobDetails from './pages/JobDetails';
+import JobApplication from './pages/JobApplication';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path="order" element={<Order />} />
         <Route path="testimonials" element={<Testimonials />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="careers" element={<Careers />} />
+        <Route path="careers/job/:id" element={<JobDetails />} />
+        <Route path="careers/apply/:id" element={<JobApplication />} />
         <Route path="admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Route>
