@@ -28,7 +28,9 @@ const PremiumNavbar: React.FC = () => {
         { name: 'Web Development', path: '/services/web' },
         { name: 'Mobile Development', path: '/services/mobile' },
         { name: 'Cloud Solutions', path: '/services/cloud' },
-        { name: 'AI & Machine Learning', path: '/services/ai' }
+        { name: 'AI & Machine Learning', path: '/services/ai' },
+        { name: 'Cybersecurity', path: '/services/security' },
+        { name: 'Database Solutions', path: '/services/database' }
       ]
     },
     { 
@@ -37,7 +39,8 @@ const PremiumNavbar: React.FC = () => {
       dropdown: [
         { name: 'Enterprise Solutions', path: '/products/enterprise' },
         { name: 'SaaS Platforms', path: '/products/saas' },
-        { name: 'Mobile Apps', path: '/products/mobile' }
+        { name: 'Mobile Apps', path: '/products/mobile' },
+        { name: 'E-commerce Solutions', path: '/products/ecommerce' }
       ]
     },
     { name: 'Portfolio', path: '/projects' },
@@ -86,7 +89,7 @@ const PremiumNavbar: React.FC = () => {
                     </button>
                     
                     {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-100 dark:border-gray-700 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-100 dark:border-gray-700 py-2 animate-slide-in-from-top-2 duration-200">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
@@ -148,7 +151,7 @@ const PremiumNavbar: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 animate-in slide-in-from-top duration-300">
+          <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 animate-slide-in-from-top duration-300">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <div key={item.name}>

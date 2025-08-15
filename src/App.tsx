@@ -2,6 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
+import Services from './pages/Services';
+import Products from './pages/Products';
+import Blog from './pages/Blog';
 import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
 import Order from './pages/Order';
@@ -20,6 +23,12 @@ function App() {
         <Route index element={<Home />} />
         <Route path="Business" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="services/:category" element={<Services />} />
+        <Route path="products" element={<Products />} />
+        <Route path="products/:category" element={<Products />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="blog/:id" element={<Blog />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ProjectDetails />} />
         <Route path="order" element={<Order />} />

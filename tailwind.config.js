@@ -9,6 +9,9 @@ export default {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-in-from-top': 'slideInFromTop 0.3s ease-out',
         'slide-in-from-top-2': 'slideInFromTop2 0.2s ease-out',
+        'bounce-slow': 'bounce 3s infinite',
+        'pulse-slow': 'pulse 4s infinite',
+        'spin-slow': 'spin 8s linear infinite',
       },
       keyframes: {
         'gradient-x': {
@@ -78,6 +81,19 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Inter', 'sans-serif'],
+      },
+      screens: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
       },
     },
   },
