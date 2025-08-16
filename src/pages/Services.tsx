@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Smartphone, Cloud, Brain, Shield, Database, Globe, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import { Code, Smartphone, Cloud, Brain, Shield, Database, Globe, Zap, CheckCircle, ArrowRight, Play, GraduationCap, Palette } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
@@ -131,57 +131,99 @@ const Services: React.FC = () => {
       bgColor: 'bg-indigo-50 dark:bg-indigo-900/20',
       textColor: 'text-indigo-600 dark:text-indigo-400',
       image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1'
+    },
+    {
+      id: 'academic',
+      icon: GraduationCap,
+      title: 'Academic Projects & Thesis',
+      description: 'Professional assistance for university students with projects, thesis, and assignments.',
+      features: [
+        'Research Projects & Methodology',
+        'Thesis Writing & Documentation',
+        'Assignment Help & Consultation',
+        'Data Analysis & Visualization',
+        'Literature Review & Citations',
+        'Academic Presentation Design'
+      ],
+      technologies: ['SPSS', 'R', 'Python', 'LaTeX', 'Mendeley', 'EndNote'],
+      pricing: 'Starting from $500',
+      deliveryTime: '1-4 weeks',
+      color: 'from-teal-500 to-teal-700',
+      bgColor: 'bg-teal-50 dark:bg-teal-900/20',
+      textColor: 'text-teal-600 dark:text-teal-400',
+      image: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1'
+    },
+    {
+      id: 'design',
+      icon: Palette,
+      title: 'UI & UX Design',
+      description: 'Beautiful and intuitive user interfaces that deliver exceptional user experiences.',
+      features: [
+        'User Research & Analysis',
+        'Wireframing & Prototyping',
+        'Interactive Design Systems',
+        'Usability Testing',
+        'Brand Identity Design',
+        'Mobile-First Design'
+      ],
+      technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Principle', 'Framer'],
+      pricing: 'Starting from $1,200',
+      deliveryTime: '2-5 weeks',
+      color: 'from-pink-500 to-pink-700',
+      bgColor: 'bg-pink-50 dark:bg-pink-900/20',
+      textColor: 'text-pink-600 dark:text-pink-400',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-sm font-medium text-primary-600 dark:text-primary-400 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-sm font-medium text-primary-600 dark:text-primary-400 mb-4">
             <Zap size={16} className="mr-2" />
             Our Services
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600">IT Solutions</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             From web development to AI solutions, we deliver cutting-edge technology services that drive business growth and innovation across Bangladesh and beyond.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="space-y-16">
+        <div className="space-y-12 sm:space-y-16">
           {services.map((service, index) => (
-            <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <div className={`inline-flex items-center px-4 py-2 ${service.bgColor} rounded-full text-sm font-medium ${service.textColor} mb-4`}>
+                <div className={`inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 ${service.bgColor} rounded-full text-sm font-medium ${service.textColor} mb-4`}>
                   <service.icon size={16} className="mr-2" />
                   {service.title}
                 </div>
                 
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   {service.title}
                 </h2>
                 
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start">
-                      <CheckCircle size={20} className={`mr-3 mt-0.5 ${service.textColor} flex-shrink-0`} />
-                      <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                      <CheckCircle size={18} className={`mr-3 mt-0.5 ${service.textColor} flex-shrink-0`} />
+                      <span className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Technologies */}
-                <div className="mb-8">
+                <div className="mb-6 sm:mb-8">
                   <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Technologies We Use:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
@@ -193,14 +235,14 @@ const Services: React.FC = () => {
                 </div>
 
                 {/* Pricing & Timeline */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div className={`p-4 ${service.bgColor} rounded-lg`}>
+                <div className="grid grid-cols-2 gap-4 mb-6 sm:mb-8">
+                  <div className={`p-3 sm:p-4 ${service.bgColor} rounded-lg`}>
                     <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Starting Price</h4>
-                    <p className={`text-lg font-bold ${service.textColor}`}>{service.pricing}</p>
+                    <p className={`text-base sm:text-lg font-bold ${service.textColor}`}>{service.pricing}</p>
                   </div>
-                  <div className={`p-4 ${service.bgColor} rounded-lg`}>
+                  <div className={`p-3 sm:p-4 ${service.bgColor} rounded-lg`}>
                     <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">Delivery Time</h4>
-                    <p className={`text-lg font-bold ${service.textColor}`}>{service.deliveryTime}</p>
+                    <p className={`text-base sm:text-lg font-bold ${service.textColor}`}>{service.deliveryTime}</p>
                   </div>
                 </div>
 
@@ -208,14 +250,14 @@ const Services: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/order"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                    className={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                   >
                     Get Started
                     <ArrowRight size={20} className="ml-2" />
                   </Link>
                   <Link
                     to="/contact"
-                    className={`inline-flex items-center px-6 py-3 ${service.bgColor} ${service.textColor} font-semibold rounded-lg hover:shadow-md transition-all duration-300`}
+                    className={`inline-flex items-center justify-center px-6 py-3 ${service.bgColor} ${service.textColor} font-semibold rounded-lg hover:shadow-md transition-all duration-300`}
                   >
                     Learn More
                   </Link>
@@ -229,11 +271,11 @@ const Services: React.FC = () => {
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="relative z-10 w-full h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
+                    className="relative z-10 w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
                   />
                   <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <button className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
-                      <Play size={24} className="text-white ml-1" />
+                    <button className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
+                      <Play size={20} className="text-white ml-1 sm:w-6 sm:h-6" />
                     </button>
                   </div>
                 </div>
@@ -243,22 +285,22 @@ const Services: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-8 md:p-12 text-white text-center">
-          <Globe size={48} className="mx-auto mb-6 opacity-80" />
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+        <div className="mt-16 sm:mt-20 bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-6 sm:p-8 md:p-12 text-white text-center">
+          <Globe size={32} className="mx-auto mb-4 sm:mb-6 opacity-80 sm:w-12 sm:h-12" />
+          <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ready to Transform Your Business?</h3>
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto">
             Join hundreds of satisfied clients who have chosen Trivance Tech for their digital transformation journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your Project
             </Link>
             <Link
               to="/projects"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
             >
               View Our Work
             </Link>

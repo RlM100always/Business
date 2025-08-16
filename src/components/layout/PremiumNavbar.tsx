@@ -30,7 +30,9 @@ const PremiumNavbar: React.FC = () => {
         { name: 'Cloud Solutions', path: '/services/cloud' },
         { name: 'AI & Machine Learning', path: '/services/ai' },
         { name: 'Cybersecurity', path: '/services/security' },
-        { name: 'Database Solutions', path: '/services/database' }
+        { name: 'Database Solutions', path: '/services/database' },
+        { name: 'Academic Projects & Thesis', path: '/services/academic' },
+        { name: 'UI & UX Design', path: '/services/design' }
       ]
     },
     { 
@@ -43,7 +45,7 @@ const PremiumNavbar: React.FC = () => {
         { name: 'E-commerce Solutions', path: '/products/ecommerce' }
       ]
     },
-    { name: 'Portfolio', path: '/projects' },
+    { name: 'Projects', path: '/projects' },
     { name: 'About Us', path: '/about' },
     { name: 'Careers', path: '/careers' },
     { name: 'Blog', path: '/blog' },
@@ -59,7 +61,7 @@ const PremiumNavbar: React.FC = () => {
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <Logo 
@@ -70,7 +72,7 @@ const PremiumNavbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
@@ -89,7 +91,7 @@ const PremiumNavbar: React.FC = () => {
                     </button>
                     
                     {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-100 dark:border-gray-700 py-2 animate-slide-in-from-top-2 duration-200">
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-100 dark:border-gray-700 py-2 animate-slide-in-from-top-2 duration-200">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
@@ -127,7 +129,7 @@ const PremiumNavbar: React.FC = () => {
             <DarkModeToggle />
             <Link
               to="/order"
-              className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="px-4 py-2 sm:px-6 sm:py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm"
             >
               Get Started
             </Link>
@@ -152,7 +154,7 @@ const PremiumNavbar: React.FC = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 animate-slide-in-from-top duration-300">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 max-h-96 overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
@@ -194,7 +196,7 @@ const PremiumNavbar: React.FC = () => {
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {item.name}
+                      {item.path === '/projects' ? 'Projects' : item.name}
                     </Link>
                   )}
                 </div>
