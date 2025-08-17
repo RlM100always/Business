@@ -55,7 +55,7 @@ const PremiumHero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Badge */}
-          <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium text-white mb-6 sm:mb-8 border border-white/20">
+          <div className="inline-flex items-center px-3 py-3 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium text-white mb-6 sm:mb-8 border border-white/20">
             <Sparkles size={14} className="mr-2" />
             <span className="text-center leading-tight">Bangladesh's Premier IT Solutions Company</span>
           </div>
@@ -104,7 +104,7 @@ const PremiumHero: React.FC = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary-400" />
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">500+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">50+</div>
               <div className="text-gray-300 text-xs sm:text-sm">Projects Delivered</div>
             </div>
             
@@ -112,7 +112,7 @@ const PremiumHero: React.FC = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary-400" />
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">150+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">15+</div>
               <div className="text-gray-300 text-xs sm:text-sm">Happy Clients</div>
             </div>
             
@@ -120,7 +120,7 @@ const PremiumHero: React.FC = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-primary-400" />
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">25+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">5+</div>
               <div className="text-gray-300 text-xs sm:text-sm">Countries Served</div>
             </div>
             

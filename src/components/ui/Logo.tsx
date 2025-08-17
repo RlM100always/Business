@@ -50,7 +50,7 @@ const Logo: React.FC<LogoProps> = ({ variant = 'light', size = 'md', className =
         <circle cx="20" cy="28" r="1.5" fill={accentColor} />
       </svg>
       <div className="ml-3">
-        <span className={`text-xl font-bold ${textColor}`}>Trivance</span>
+        <span className={`text-xl font-bold ${accentColor}`}>Trivance</span>
         <span className="text-xl font-bold" style={{ color: accentColor }}>Tech</span>
       </div>
     </div>

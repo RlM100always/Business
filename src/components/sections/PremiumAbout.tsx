@@ -7,18 +7,17 @@ const PremiumAbout: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const stats = [
-    { number: 500, label: 'Projects Completed', icon: Award, suffix: '+' },
-    { number: 150, label: 'Happy Clients', icon: Users, suffix: '+' },
-    { number: 50, label: 'Expert Developers', icon: Building, suffix: '+' },
-    { number: 98, label: 'Client Satisfaction', icon: TrendingUp, suffix: '%' }
+    { number: 50, label: 'Projects Completed', icon: Award, suffix: '+' },
+    { number: 15, label: 'Happy Clients', icon: Users, suffix: '+' },
+    { number: 10, label: 'Expert Developers', icon: Building, suffix: '+' },
+    { number: 99, label: 'Client Satisfaction', icon: TrendingUp, suffix: '%' }
   ];
 
   const milestones = [
-    { year: '2021', title: 'Company Founded', description: 'Started with a vision to transform Bangladesh\'s IT landscape' },
-    { year: '2022', title: 'First Major Client', description: 'Secured partnership with leading financial institution' },
-    { year: '2023', title: 'Team Expansion', description: 'Grew to 25+ talented professionals' },
-    { year: '2024', title: 'International Recognition', description: 'Won Best IT Company Award in Bangladesh' },
-    { year: '2025', title: 'Global Expansion', description: 'Serving clients across 25+ countries' }
+    { year: '2022', title: 'Company Founded', description: 'Started with a vision to transform Bangladesh\'s IT landscape' },
+    { year: '2023', title: 'First Major Client', description: 'Secured partnership with leading financial institution' },
+    { year: '2024', title: 'Team Expansion', description: 'Grew to 10+ talented professionals' },
+    { year: '2025', title: 'Global Expansion', description: 'Serving clients across 5+ countries' }
   ];
 
   useEffect(() => {
@@ -29,7 +28,7 @@ const PremiumAbout: React.FC = () => {
           animateCounters();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.4 }
     );
 
     if (sectionRef.current) {

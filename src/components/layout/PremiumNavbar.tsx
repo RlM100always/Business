@@ -46,7 +46,7 @@ const PremiumNavbar: React.FC = () => {
       ]
     },
     { name: 'Projects', path: '/projects' },
-    { name: 'About Us', path: '/about' },
+    { name: 'About', path: '/about' },
     { name: 'Careers', path: '/careers' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }

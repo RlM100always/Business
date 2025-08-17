@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '150+', label: 'Happy Clients', icon: Users },
-    { number: '50+', label: 'Expert Developers', icon: Code },
+    { number: '50+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '15+', label: 'Happy Clients', icon: Users },
+    { number: '10+', label: 'Expert Developers', icon: Code },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
 
@@ -26,9 +26,14 @@ const About = () => {
       description: 'Scalable database design and optimization'
     },
     {
+      icon: Code,
+      title: 'Software Development',
+      description: 'Software solutions tailored to your business needs'
+    },
+    {
       icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Cloud migration and infrastructure management'
+      title: 'University Projects & Thesis',
+      description: 'University projects, thesis and assignments for Global Students'
     },
     {
       icon: Shield,
@@ -44,23 +49,18 @@ const About = () => {
 
   const team = [
     {
-      name: 'Md. Rahman Ahmed',
+      name: 'Md. Rakib Hossain',
       position: 'CEO & Founder',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-      description: 'Visionary leader with 15+ years in IT industry'
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQFwWtuaiFDuLA/profile-displayphoto-shrink_800_800/B56ZV24OmtHoAg-/0/1741456208507?e=1758153600&v=beta&t=YUb3zgFanOJV55Mtn8ssIbdwkeSbjvyCdCumeIWFK48',
+      description: 'Visionary leader with 5+ years in IT industry'
     },
-    {
-      name: 'Sarah Khan',
-      position: 'CTO',
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-      description: 'Technology expert specializing in scalable solutions'
-    },
-    {
-      name: 'Arif Hassan',
-      position: 'Lead Developer',
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+     {
+      name: 'Shamshur Rahman',
+      position: 'CEO & Co-Founder',
+      image: 'https://avatars.githubusercontent.com/u/109974472?v=4',
       description: 'Full-stack developer with expertise in modern frameworks'
     },
+   
     {
       name: 'Fatima Begum',
       position: 'UI/UX Director',
@@ -70,11 +70,10 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: '2021', title: 'Company Founded', description: 'Started with a vision to transform Bangladesh\'s IT landscape' },
-    { year: '2022', title: 'First Major Client', description: 'Secured partnership with leading financial institution' },
-    { year: '2023', title: 'Team Expansion', description: 'Grew to 25+ talented professionals' },
-    { year: '2024', title: 'International Recognition', description: 'Won Best IT Company Award in Bangladesh' },
-    { year: '2025', title: 'Global Expansion', description: 'Serving clients across 15+ countries' }
+    { year: '2022', title: 'Company Founded', description: 'Started with a vision to transform Bangladesh\'s IT landscape' },
+    { year: '2023', title: 'First Major Client', description: 'Secured partnership with leading financial institution' },
+    { year: '2024', title: 'Team Expansion', description: 'Grew to 10+ talented professionals' },
+    { year: '2025', title: 'Global Expansion', description: 'Serving clients across 5+ countries' }
   ];
 
   return (
